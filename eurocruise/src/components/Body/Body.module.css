@@ -1,0 +1,50 @@
+.container{
+        text-align: center;
+        background-image:url("/src/assets/Rectangle2.svg");
+        background-size: 100%;
+        background-repeat:no-repeat;
+        background-position:center;
+        height: 480px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 63px
+}
+.text{
+    color: aliceblue;
+    font-size: 78.6px;
+}
+.text, .text2 {
+    display: block;
+    margin-bottom: 32px; /* Задайте нужный отступ между текстовыми блоками */
+  }
+.text2{
+    color: aliceblue;
+    font-size: 21.33px;
+}
+.container2{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 12%;
+    padding-left: 12%;
+}
+.img{
+    height: 500px;
+    width: 500px;
+}
+.vibe{
+    display: flex;
+}
+.about{
+    font-size: 66.8px;
+}
+.paragraph{
+    font-size: 24px;
+}
+.tabl{
+    margin-left:10%;
+    width: 1250px;
+    margin-right: 10%;
+    height: 260px;
+}

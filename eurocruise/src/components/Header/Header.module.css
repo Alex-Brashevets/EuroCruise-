@@ -1,0 +1,97 @@
+.text:visited {
+    color: white !important;
+  }
+.container {
+    display: flex;
+    
+}
+@media (max-width:1200px){
+    .container{
+        max-width: 970px;
+    }
+}
+ 
+@media (max-width:992px){
+        .container{
+            max-width: 750px;
+        }
+    
+}
+@media (max-width:767px){
+    .container{
+        max-width: none;
+    }
+
+}
+
+    
+.manchik{
+    border-right: 2px solid #000000; 
+    width: 38.8px;
+    height: 63px;
+    margin-top: 28px;
+}
+.logoimg{
+    margin-top: 32px;
+    margin-left: 274px;
+}
+.button1{
+    color: white;
+    background-color: rgb(38, 38, 148);
+    border-radius: 6px;
+    width :195px;
+    outline: none;
+    height :37px ;
+}
+.placeimg{
+    margin-top: 24px;
+    margin-left: 32px;
+    border: none;
+}
+.ofice{
+    margin-top: 49px;
+    margin-left: 9px;
+
+}
+.button1{
+    margin-top: 37px;
+    margin-left: 200px;
+
+}
+.language{
+    margin-top: 45px;
+    margin-left: 40px;
+}
+.strelkaimg{
+    margin-top:19px;
+    margin-left: 5px;
+}
+.li1{
+    margin-top: 32px;
+    display: flex;
+    background-color: rgb(38, 38, 148);
+    height: 66px;
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+}
+.text{
+    padding-top:24px ;
+    margin-left: 40px;
+    list-style: none;
+    color: azure;
+
+}
+.link{
+    text-decoration: none;
+}
+.text a {
+    color: white;
+  }
+  
+  .text a:hover,
+  .text a:active,
+  .text a:visited,
+  .text a:focus {
+    color: white;
+  }

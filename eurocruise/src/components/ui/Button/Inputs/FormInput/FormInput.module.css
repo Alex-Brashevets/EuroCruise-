@@ -1,0 +1,33 @@
+.container {
+    border: 1px solid #D6EAFF;
+     padding: 16px 19px;
+    background-color: white;
+     max-height: 80px;
+     width: 420px;
+     display: flex;
+     flex-direction: column;
+     align-items: start;
+     border-radius: 12px;
+ }
+ 
+ .label {
+     font-size: 1rem;
+     color: #667582;
+     display: flex;
+     align-items: center;
+     gap: 4px;
+ }
+ 
+ .input::placeholder {
+     font-size: 1.125rem;
+     color: #C7C7C7;
+ }
+ 
+ .input {
+     font-size: 1.125rem;
+     border: none;
+ }
+ .input:active,
+ .input:focus {
+     outline: none;
+ }
