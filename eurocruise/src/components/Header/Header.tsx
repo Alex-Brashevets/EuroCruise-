@@ -2,13 +2,14 @@ import styles from "./Header.module.css";
 import logo from "/src/assets/logo.svg";
 import strelka from "/src/assets/strelka.svg";
 import placeholder from "/src/assets/placeholder.svg";
+import {NavLink} from "react-router-dom";
 export const Header = () => {
   return (
     <header>
       <div className={styles.container}>
-        <a href="ссылка" className={styles.link}>
-          <img className={styles.logoimg} src={logo} alt="xz" />
-        </a>
+        <NavLink className={styles.link} to={'/'}>
+          <img className={styles.logoimg} src={logo} alt="logo" />
+        </NavLink>
         <div className={styles.manchik}></div>
         <img className={styles.placeimg} src={placeholder} alt="xz" />
         <a href="ссылка" className={styles.link}>
@@ -24,34 +25,34 @@ export const Header = () => {
       </div>
       <ul className={styles.li1}>
         <li className={styles.text}>
-          <a href="ссылка1" className={styles.link}>
+          <NavLink to="/about-us" className={styles.link}>
             О НАС
-          </a>
+          </NavLink>
         </li>
         <li className={styles.text}>
-          <a href="ссылка2" className={styles.link}>
+          <NavLink to="/service-center" className={styles.link}>
             СЕРВИСНЫЙ ЦЕНТР
-          </a>
+          </NavLink>
         </li>
         <li className={styles.text}>
-          <a href="ссылка3" className={styles.link}>
+          <NavLink to="/vacancies" className={styles.link}>
             ВАКАНСИИ
-          </a>
+          </NavLink>
         </li>
         <li className={styles.text}>
-          <a href="ссылка4" className={styles.link}>
+          <NavLink to="/services" className={styles.link}>
             ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ
-          </a>
+          </NavLink>
         </li>
         <li className={styles.text}>
-          <a href="ссылка5" className={styles.link}>
+          <NavLink to="/delivery" className={styles.link}>
             ДОСТАВКА ГРУЗОВ
-          </a>
+          </NavLink>
         </li>
         <li className={styles.text}>
-          <a href="ссылка6" className={styles.link}>
+          <NavLink to="/sales" className={styles.link}>
             ПРОДАЖА ТЕХНИКИ С ПРОБЕГОМ
-          </a>
+          </NavLink>
         </li>
       </ul>
     </header>

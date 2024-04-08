@@ -1,25 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import { Button } from './components/ui/Button/Button'
-import { Header } from './components/Header/Header'
-import { Body } from './components/Body/Body'
-import { NoName } from './components/NoName/NoName'
-import SettlementForm from './components/SettelmentForm/SettlementForm'
+import {createBrowserRouter, createRoutesFromElements, Route} from "react-router-dom";
+import {RouterProvider} from "react-router";
+import RootLayout from "./components/Layouts/RootLayout/RootLayout";
+import MainPage from "./pages/MainPage/MainPage";
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 
+const DefaultRouter = createBrowserRouter(
+    createRoutesFromElements(
+        <Route path='/' element={<RootLayout/>}>
+          <Route path='/' element={<MainPage/>}/>
+          <Route path='*' element={<NotFoundPage/>} />
+        </Route>
+    )
+);
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
-    <>
-    
-      <Header/> 
-      <Body/>
-      <SettlementForm/>
-      <NoName/>
-    </>
+      <>
+        <RouterProvider router={DefaultRouter}/>
+      </>
   )
 }
 export default App
