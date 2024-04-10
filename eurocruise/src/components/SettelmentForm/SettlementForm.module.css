@@ -1,12 +1,12 @@
 .representative_info {
     display: flex;
     justify-content: space-between;
+    gap: 20px
+}
+.container {
     padding-left: 10%;
     padding-right: 10%;
-    gap: 20px
-    
 }
-
 .column {
     display: flex;
     flex-direction: column;
@@ -31,8 +31,6 @@
     align-items: center;
     gap: 38px;
     margin-bottom: 44px;
-    padding-left: 10%;
-    padding-right: 10%;
 }
 .header .line {
     width: 2px;
@@ -53,17 +51,13 @@
 }
 
 .info_title {
-    padding-left: 10%;
-    padding-right: 10%;
     font-size: 1.25rem;
     font-weight: bold;
     color: #667582;
-    margin: 22px 0;
+    margin: 22px 4px;
 }
 
 .routes {
-    padding-left: 10%;
-    padding-right: 10%;
     display: flex;
 }
 .routes div:nth-child(1) {
@@ -91,3 +85,50 @@
     border-top-right-radius: 12px !important;
     border-bottom-right-radius: 12px !important;
 }
+
+.insurance{
+    background-color: #D6EAFF;
+    color: #667582;
+    padding: 8px;
+    display: flex;
+    gap: 8px;
+    border-radius: 6px;
+}
+
+.buttons_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.insurance div {
+    border-radius: 3px;
+    padding: 20px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.selected {
+    background-color: #006790;
+    color: #FFFFFF;
+}
+
+.confirm {
+    display: flex;
+    gap: 80px;
+}
+
+.button {
+    background-color: #0A3F72;
+    border-radius: 6px;
+    color: #FFFFFF;
+    font-size: 18px;
+    padding: 25px 20px 25px 32px;
+    border: none;
+    cursor: pointer;
+}
+.button:hover {
+     transform: scale(1.03);
+ }

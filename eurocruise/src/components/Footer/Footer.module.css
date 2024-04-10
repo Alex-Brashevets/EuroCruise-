@@ -1,0 +1,22 @@
+.Footercontainer{
+    display: flex;
+    justify-content: space-around;
+}
+.container_img{
+    display: flex;
+    flex-direction: column;
+}
+.columText{
+    display: flex;
+}
+.info_container{
+    margin-top: 15px;
+    text-decoration: none;
+    list-style: none
+}
+.columText{
+    margin-top: 15px;
+}
+.Footercontainer{
+    margin-top: 20px;
+}

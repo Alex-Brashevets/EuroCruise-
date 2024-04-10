@@ -1,0 +1,7 @@
+.ben{
+    display: flex;
+    justify-content: space-around;
+    padding-left: 10%;
+    padding-right: 10%;
+    gap:10px
+}

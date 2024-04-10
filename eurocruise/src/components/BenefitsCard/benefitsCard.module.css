@@ -1,0 +1,22 @@
+.descriptionText{
+    display: flex;
+}
+.card{
+    font-size: 30px;
+}
+.card_text{
+    font-size: 13px;
+}
+
+.descriptionText{
+    margin-top: 10px;
+    gap: 140px;
+}
+.Benifit{
+    margin-top: 20px;
+    background-color: #F3F9FF;
+    padding: 30px;
+    justify-content: center;
+    border-radius: 12px;
+    align-items: center;
+}

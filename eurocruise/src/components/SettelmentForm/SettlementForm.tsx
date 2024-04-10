@@ -1,10 +1,13 @@
 import { FormInput } from '../ui/Button/Inputs/FormInput/FormInput';
 import styles from './SettlementForm.module.css';
 import representative from '/src/assets/world_2.svg'
+import {GoogleReCaptchaCheckbox} from "@google-recaptcha/react";
+import {useState} from "react";
 
 const SettlementForm = () => {
+  const [insuranceSelected, SetInsuranceSelected] = useState(true);
   return (
-      <div>
+      <div className={styles.container}>
         <div className={styles.header}>
           <div className={styles.header_info}>
             РАСЧЕТ СТОИМОСТИ
@@ -31,6 +34,25 @@ const SettlementForm = () => {
           <FormInput label='Страна Куда' icon={representative} placeholder='Беларусь'/>
           <FormInput label='Город Окуда' icon={representative} placeholder='Название'/>
           <FormInput label='Город Куда' icon={representative} placeholder='Название'/>
+        </div>
+        <h3 className={styles.info_title}>Страхование груза</h3>
+        <div className={styles.buttons_container}>
+          <div className={styles.insurance}>
+            <div className={insuranceSelected ? styles.selected:""} onClick={()=>SetInsuranceSelected(true)}>
+              Застраховать
+            </div>
+            <div className={!insuranceSelected ?styles.selected:""} onClick={()=>SetInsuranceSelected(false)}>
+              Нет
+            </div>
+          </div>
+          <div className={styles.confirm}>
+            <GoogleReCaptchaCheckbox
+            />
+            <button className={styles.button}>
+              Расчитать стоимость
+            </button>
+          </div>
+
         </div>
       </div>
   );
