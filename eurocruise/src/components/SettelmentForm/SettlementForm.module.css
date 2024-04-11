@@ -6,6 +6,8 @@
 .container {
     padding-left: 10%;
     padding-right: 10%;
+    font-family: "Montserrat", sans-serif;
+    margin: 6% 0;
 }
 .column {
     display: flex;

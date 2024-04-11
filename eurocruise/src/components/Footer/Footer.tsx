@@ -6,7 +6,7 @@ import FirstScreen from "/src/assets/Rectangle2.svg";
 export const Footer = () => {
   return (
     <footer>
-      <div className={styles.Footercontainer}>
+      <div className={styles.footer_container}>
         <div className={styles.container_img}>
           <img className={styles.logo2} src={logo} alt="" />
           <div className={styles.columText}>

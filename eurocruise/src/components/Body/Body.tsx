@@ -1,11 +1,9 @@
 import styles from "./Body.module.css";
-import FirstScreen from "/src/assets/Rectangle2.svg";
 import MainCar from "/src/assets/car1.svg";
 import ThreeLine from "/src/assets/line.svg";
-import Tabloo from "/src/assets/tablo.svg";
 export const Body = () => {
   return (
-    <main>
+    <>
       <div className={styles.container}>
         <div className="">
           <h1 className={styles.text}>ГРУЗОВЫЕ ПЕРЕВОЗКИ</h1>
@@ -19,7 +17,7 @@ export const Body = () => {
         <div className={styles.abotus}>
           <div className={styles.vibe}>
             <h2 className={styles.about}>О нас </h2>
-            <img className={styles.line} src={ThreeLine}></img>
+            <img className={styles.line} src={ThreeLine}/>
           </div>
           <p className={styles.paragraph}>
             {" "}
@@ -34,10 +32,8 @@ export const Body = () => {
             vero minima ex?
           </p>
         </div>
-        <img className={styles.img} src={MainCar}></img>
+        <img className={styles.img} src={MainCar}/>
       </div>
-
-      
-    </main>
+    </>
   );
 };

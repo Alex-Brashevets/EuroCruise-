@@ -3,7 +3,7 @@
   }
 .container {
     display: flex;
-    
+    font-family: "Montserrat", sans-serif;
 }
 @media (max-width:1200px){
     .container{
@@ -84,6 +84,7 @@
 }
 .link{
     text-decoration: none;
+    font-family: "Montserrat", sans-serif;
 }
 .text a {
     color: white;

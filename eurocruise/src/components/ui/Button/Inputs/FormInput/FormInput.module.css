@@ -21,11 +21,13 @@
  .input::placeholder {
      font-size: 1.125rem;
      color: #C7C7C7;
+     font-weight: 400;
  }
  
  .input {
      font-size: 1.125rem;
      border: none;
+     font-weight: 600;
  }
  .input:active,
  .input:focus {

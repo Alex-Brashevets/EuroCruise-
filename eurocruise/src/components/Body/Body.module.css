@@ -9,7 +9,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 63px
+        margin-bottom: 63px;
+        font-family: "Montserrat", sans-serif;
 }
 .text{
     color: aliceblue;
@@ -38,9 +39,11 @@
 }
 .about{
     font-size: 66.8px;
+    font-family: "Montserrat", sans-serif;
 }
 .paragraph{
     font-size: 24px;
+    font-family: "Montserrat", sans-serif;
 }
 .tabl{
     margin-left:10%;

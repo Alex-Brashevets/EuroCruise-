@@ -1,11 +1,12 @@
 .descriptionText{
     display: flex;
 }
-.card{
-    font-size: 30px;
+.title{
+    font-size: 26px;
+    font-weight: 800;
 }
 .card_text{
-    font-size: 13px;
+    font-size: 16px;
 }
 
 .descriptionText{

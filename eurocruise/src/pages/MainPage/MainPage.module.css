@@ -1,7 +1,9 @@
-.ben{
+.benefits_container{
     display: flex;
     justify-content: space-around;
     padding-left: 10%;
     padding-right: 10%;
-    gap:10px
+    gap:10px;
+    font-family: "Montserrat", sans-serif;
+    margin: 2% 0;
 }
