@@ -3,6 +3,7 @@ import logo from "/src/assets/logo.svg";
   import styles from "./Footer.module.css";
 import vector from "/src/assets/Vector.svg";
 import FirstScreen from "/src/assets/Rectangle2.svg";
+import {QuestionUsForm} from "../QuestionUsForm/QuestionUsForm";
 export const Footer = () => {
   return (
     <footer>
@@ -22,7 +23,9 @@ export const Footer = () => {
             <div className={styles.FooterText}>(334) 202-4792</div>
           </div>
         </div>
-        <div className={styles.Question}>Question us</div>
+        <div className={styles.Question}>
+          <QuestionUsForm/>
+        </div>
         <div className={styles.CompanyMain}>
           <div className={styles.Company}>Company</div>
           <ul className={styles.info}>

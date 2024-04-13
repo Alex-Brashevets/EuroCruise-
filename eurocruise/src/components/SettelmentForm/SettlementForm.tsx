@@ -1,4 +1,4 @@
-import { FormInput } from '../ui/Button/Inputs/FormInput/FormInput';
+import { FormInput } from '../ui/Inputs/FormInput/FormInput';
 import styles from './SettlementForm.module.css';
 import representative from '/src/assets/world_2.svg'
 import {GoogleReCaptchaCheckbox} from "@google-recaptcha/react";
