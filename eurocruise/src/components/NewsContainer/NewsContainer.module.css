@@ -1,0 +1,16 @@
+.vibe{
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.news{
+    font-size: 60px;
+}
+.threeImg{
+    display: flex;
+    justify-content: space-evenly;
+}
+.img{
+    height: 336px;
+    width: 307px;
+}

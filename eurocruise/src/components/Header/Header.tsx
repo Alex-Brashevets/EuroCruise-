@@ -7,21 +7,27 @@ export const Header = () => {
   return (
     <header>
       <div className={styles.container}>
-        <NavLink className={styles.link} to={'/'}>
-          <img className={styles.logoimg} src={logo} alt="logo" />
-        </NavLink>
-        <div className={styles.manchik}></div>
-        <img className={styles.placeimg} src={placeholder} alt="xz" />
-        <a href="ссылка" className={styles.link}>
-          <div className={styles.ofice}> НАШ ОФИС</div>
-        </a>
-        <a href="ссылка" className={styles.link}>
-          <button className={styles.button1}> узнать стоимость </button>
-        </a>
-        <a href="ссылка" className={styles.link}>
-          <div className={styles.language}> RU </div>
-        </a>
+        <div className={styles.item}>
+          <NavLink className={styles.link} to={'/'}>
+            <img className={styles.logo} src={logo} alt="logo" />
+          </NavLink>
+          <div className={styles.vertical_line}/>
+          <img className={styles.place_img} src={placeholder} alt="xz" />
+          <a href="ссылка" className={styles.link}>
+            <div className={styles.office}> НАШ ОФИС</div>
+          </a>
+        </div>
+        <div className={styles.item}>
+          <div className={styles.header_button}>
+          <a href="ссылка" className={styles.link1}>
+            <button className={styles.button}> Рассчитать стоимость</button>
+          </a>
+          </div>
+          <a href="ссылка" className={styles.link}>
+            <div className={styles.language}> RU </div>
+          </a>
         <img className={styles.strelkaimg} src={strelka} alt="xz" />
+        </div>
       </div>
       <ul className={styles.li1}>
         <li className={styles.text}>
