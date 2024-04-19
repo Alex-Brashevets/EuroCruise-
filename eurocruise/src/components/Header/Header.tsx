@@ -18,11 +18,13 @@ export const Header = () => {
           </a>
         </div>
         <div className={styles.item}>
+
           <div className={styles.header_button}>
           <a href="ссылка" className={styles.link1}>
             <button className={styles.button}> Рассчитать стоимость</button>
           </a>
           </div>
+
           <a href="ссылка" className={styles.link}>
             <div className={styles.language}> RU </div>
           </a>
