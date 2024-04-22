@@ -12,8 +12,6 @@ import { NewsContainer } from "../../components/NewsContainer/NewsContainer";
 const MainPage = () => {
   return (
       <>
-      <Body/>
-      <SettlementForm/>
 
       </>
   );

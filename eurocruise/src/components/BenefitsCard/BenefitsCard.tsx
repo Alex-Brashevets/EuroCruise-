@@ -5,7 +5,6 @@ interface BenefitsCardProps{
   title:string, description:ReactNode, img:string}
 export const BenefitsCard = ({title,description,img} :BenefitsCardProps) => {
   return ( 
-
         <div className={styles.Benifit}>
             <div className={styles.title}>
               {title}

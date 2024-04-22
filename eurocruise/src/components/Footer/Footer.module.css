@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
+    margin: 0 6%;
 }
 .container_img{
     display: flex;
@@ -15,5 +16,15 @@
     margin-top: 15px;
     text-decoration: none;
     list-style: none
+}
+@media only screen and (max-width: 650px) {
+    .footer_container{
+        margin: 0 14%;
+    }
+}
+
+/*планшет*/
+@media only screen and (min-width: 650px)  and (max-width: 1080px) {
+
 }
 

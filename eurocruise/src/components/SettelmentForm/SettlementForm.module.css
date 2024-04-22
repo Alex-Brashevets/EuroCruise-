@@ -134,3 +134,52 @@
 .button:hover {
      transform: scale(1.03);
  }
+ @media only screen and (max-width: 650px) {
+    .representative_info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px
+    }
+    .header_info{
+        font-size: 7px;
+        height: 40px;
+        width: 290px;
+    }
+    .header_description span{
+        font-size: 6px;
+    }    .header_description{
+        font-size: 10px;
+    }
+    .column{
+        gap: 20px;
+    }
+    .confirm{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .buttons_container{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .routes div{
+        width: 320px;
+    }
+    .column div{
+        width: 320px;
+    }
+    .routes {
+        flex-direction: column;
+    }
+   
+   
+}
+
+/*планшет*/
+@media only screen and (min-width: 650px)  and (max-width: 1080px) {
+    .representative_info {
+        display: flex;
+        justify-content: initial;
+        gap: 20px
+    }
+}

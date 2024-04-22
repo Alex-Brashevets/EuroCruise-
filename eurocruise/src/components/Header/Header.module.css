@@ -115,7 +115,49 @@
             font-size: 4px;
         }
     .logo{
-        width: 90px;
+        width: 200px;
+        height: 50px;
+    }
+}
+@media only screen and (min-width: 550px) and (max-width: 650px){
+    .place_img{
+        width: 10px;
+    }
+    .language{
+        font-size: 8px;
+    }
+    .strelkaimg{
+        width: 3px;
+        margin-left:1px;
+    }
+    .office{
+        font-size: 8px;
+    }
+        .link{
+            font-family: "Montserrat", sans-serif;
+            font-size: 8px;
+            gap: 4px;
+        }
+        .item a {
+            font-size: 13px;
+        }
+        .vertical_line{
+            height: 30px;
+        }
+        .text{
+            padding: 0 2%;
+        }
+        .li1{
+            padding: 0 3%;
+
+        }
+        .button{
+            width: 50px;
+            height: 23px;
+            font-size: 6px;
+        }
+    .logo{
+        width: 200px;
         height: 50px;
     }
 }
@@ -140,9 +182,6 @@
         .li1{
             padding: 0 3%;
 
-        }
-        .link1{
-            
         }
         .language{
             font-size: 20px;

@@ -31,3 +31,13 @@
     font-weight: 500;
     font-size: 18px;
 }
+@media only screen and (max-width: 650px) {
+    .footer_container{
+        margin: 0 14%;
+    }
+}
+
+/*планшет*/
+@media only screen and (min-width: 650px)  and (max-width: 1080px) {
+
+}

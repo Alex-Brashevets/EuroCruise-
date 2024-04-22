@@ -10,8 +10,9 @@
 }
 
 .descriptionText{
+    display: flex;
     margin-top: 10px;
-    gap: 140px;
+    justify-content: space-between;
 }
 .Benifit{
     margin-top: 20px;
@@ -21,3 +22,9 @@
     border-radius: 12px;
     align-items: center;
 }
+@media only screen and (min-width: 650px)  and (max-width: 1080px) {
+    .card_text{
+        font-size: 40px;
+    }
+}
+
