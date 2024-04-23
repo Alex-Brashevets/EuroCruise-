@@ -20,11 +20,17 @@
 @media only screen and (max-width: 650px) {
     .footer_container{
         margin: 0 14%;
+        flex-direction: column;
+        gap: 40px;
     }
 }
 
 /*планшет*/
 @media only screen and (min-width: 650px)  and (max-width: 1080px) {
-
+    .footer_container{
+        margin: 0 14%;
+        flex-direction: column;
+        gap: 40px
+    }
 }
 

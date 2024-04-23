@@ -62,31 +62,7 @@
 .routes {
     display: flex;
 }
-.routes div:nth-child(1) {
-    border-top-left-radius: 12px !important;
-    border-bottom-left-radius: 12px !important;
-    border-top-right-radius: 0 !important;
-    border-bottom-right-radius: 0 !important;
-}
 
-.routes div:nth-child(2) {
-    border-top-left-radius: 0 !important;
-    border-bottom-left-radius: 0 !important;
-    border-top-right-radius: 0 !important;
-    border-bottom-right-radius: 0 !important;
-}
-.routes div:nth-child(3) {
-    border-top-left-radius: 0 !important;
-    border-bottom-left-radius: 0 !important;
-    border-top-right-radius: 0 !important;
-    border-bottom-right-radius: 0 !important;
-}
-.routes div:nth-child(4) {
-    border-top-left-radius: 0 !important;
-    border-bottom-left-radius: 0 !important;
-    border-top-right-radius: 12px !important;
-    border-bottom-right-radius: 12px !important;
-}
 
 .insurance{
     background-color: #D6EAFF;
@@ -179,7 +155,51 @@
 @media only screen and (min-width: 650px)  and (max-width: 1080px) {
     .representative_info {
         display: flex;
-        justify-content: initial;
+        justify-content: space-between;
         gap: 20px
+    }
+    .routes {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 10px;
+    }
+    .representative_info div{
+        width: auto;
+    }
+    .routes div {
+        width: auto;
+    }
+    .buttons_container{
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+@media only screen  and (min-width: 1080px) {
+    .routes div:nth-child(1) {
+        border-top-left-radius: 12px !important;
+        border-bottom-left-radius: 12px !important;
+        border-top-right-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+    }
+
+    .routes div:nth-child(2) {
+        border-top-left-radius: 0 !important;
+        border-bottom-left-radius: 0 !important;
+        border-top-right-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+    }
+    .routes div:nth-child(3) {
+        border-top-left-radius: 0 !important;
+        border-bottom-left-radius: 0 !important;
+        border-top-right-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+    }
+    .routes div:nth-child(4) {
+        border-top-left-radius: 0 !important;
+        border-bottom-left-radius: 0 !important;
+        border-top-right-radius: 12px !important;
+        border-bottom-right-radius: 12px !important;
     }
 }
