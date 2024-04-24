@@ -44,8 +44,10 @@
 }
 .strelkaimg{
     margin-left:1px;
+    margin-right: 38px;
 
 }
+
 .li1{
     display: flex;
     background-color:#0A3F72;

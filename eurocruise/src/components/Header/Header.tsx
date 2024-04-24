@@ -1,8 +1,10 @@
 import styles from "./Header.module.css";
 import logo from "/src/assets/logo.svg";
+import BurgerM from "/src/assets/BurgerMenu.svg";
 import strelka from "/src/assets/strelka.svg";
 import placeholder from "/src/assets/placeholder.svg";
 import {NavLink} from "react-router-dom";
+import React, { useState } from 'react';
 export const Header = () => {
   return (
     <header>
@@ -18,7 +20,6 @@ export const Header = () => {
           </a>
         </div>
         <div className={styles.item}>
-
           <div className={styles.header_button}>
           <a href="ссылка" className={styles.link1}>
             <button className={styles.button}> Рассчитать стоимость</button>
@@ -29,6 +30,9 @@ export const Header = () => {
             <div className={styles.language}> RU </div>
           </a>
         <img className={styles.strelkaimg} src={strelka} alt="xz" />
+        <div className={styles.Burger}>     
+        <img className={styles.Burgerimg} src={BurgerM} alt="xz" />
+        </div>
         </div>
       </div>
       <ul className={styles.li1}>
