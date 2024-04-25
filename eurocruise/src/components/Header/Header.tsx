@@ -5,7 +5,12 @@ import strelka from "/src/assets/strelka.svg";
 import placeholder from "/src/assets/placeholder.svg";
 import {NavLink} from "react-router-dom";
 import React, { useState } from 'react';
+import { useOnClickOutside } from "../../utils/hooks/useOnClickOutside";
 export const Header = () => {
+  const [nav, setNav] = useState(false);  
+  const sideNavBar = React.useRef<HTMLDivElement>(null);
+  useOnClickOutside(sideNavBar, () => setNav(false));
+
   return (
     <header>
       <div className={styles.container}>
@@ -30,8 +35,27 @@ export const Header = () => {
             <div className={styles.language}> RU </div>
           </a>
         <img className={styles.strelkaimg} src={strelka} alt="xz" />
-        <div className={styles.Burger}>     
-        <img className={styles.Burgerimg} src={BurgerM} alt="xz" />
+        <div>
+        <div onClick={()=> setNav(!nav)} className={styles.Burger}>     
+        {nav ?<img src={BurgerM} alt="Open Burger Menu" /> : <img src={BurgerM} alt="Closed Burger Menu" />} 
+        </div>
+        {nav && <div ref ={sideNavBar}> 
+          <ul 
+          className={nav ? styles.menu : styles.active}>
+          <li>
+            <a href="##">product</a>
+          </li>
+          <li>
+            <a href="##">product</a>
+          </li>
+          <li>
+            <a href="##">product</a>
+          </li>
+          <li>
+            <a href="##">product</a>
+          </li>
+        </ul>
+        </div>}
         </div>
         </div>
       </div>

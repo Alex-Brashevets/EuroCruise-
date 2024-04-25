@@ -47,7 +47,29 @@
     margin-right: 38px;
 
 }
-
+.menu {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: fixed;
+    width: 200px;
+    padding-left: 10px;
+    right: 0; /* Изменено значение right */
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    background-color: rgb(64, 122, 176);
+    z-index: 10;
+    transition: left 7 ease; 
+  }
+.menu ul {
+    display: flex;
+    flex-direction: column;
+  }
+.active{
+    right: 0;
+   
+}
 .li1{
     display: flex;
     background-color:#0A3F72;
