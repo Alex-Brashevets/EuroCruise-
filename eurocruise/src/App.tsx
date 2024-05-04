@@ -10,6 +10,7 @@ const DefaultRouter = createBrowserRouter(
         <Route path='/' element={<RootLayout/>}>
           <Route path='/' element={<MainPage/>}/>
           <Route path='*' element={<NotFoundPage/>} />
+          <Route path='/about-us' element={<NotFoundPage/>} />
         </Route>
     )
 );

@@ -1,13 +1,40 @@
+import { SubmitHandler, useForm } from 'react-hook-form';
 import { FormInput } from '../ui/Inputs/FormInput/FormInput';
 import styles from './SettlementForm.module.css';
 import representative from '/src/assets/world_2.svg'
 import {GoogleReCaptchaCheckbox} from "@google-recaptcha/react";
+import { useForm as useSendForm } from '@formspree/react';
 import {useState} from "react";
+
+
+export interface SettlementFormInputs {
+  representative: string;
+  email: string;
+  phone: string;
+  companyName: string;
+  сountryFrom: string;
+  сountryTo: string;
+  cityFrom: string;
+  cityTo: string
+}
+
 
 const SettlementForm = () => {
   const [insuranceSelected, SetInsuranceSelected] = useState(true);
+  const [state, handleSendFormSubmit] = useSendForm("xayrbezz");
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<SettlementFormInputs>()
+
+  const onSubmit: SubmitHandler<SettlementFormInputs> = (data: any) => {
+    console.log(data)
+    handleSendFormSubmit(data)
+  }
+
   return (
-      <div className={styles.container}>
+      <form className={styles.container} onSubmit={handleSubmit(onSubmit)}>
         <div className={styles.header}>
           <div className={styles.header_info}>
             РАСЧЕТ СТОИМОСТИ
@@ -20,20 +47,92 @@ const SettlementForm = () => {
         </div>
         <div className={styles.representative_info}>
           <div className={styles.column}>
-            <FormInput label='Представитель' icon={representative} placeholder='Имя'/>
-            <FormInput label='Электронная почта' icon={representative} placeholder='Почта'/>
+            <FormInput 
+            label='Представитель'
+             icon={representative} 
+             placeholder='Имя'
+             register={register}
+             register_field='representative'
+             isError={errors.representative}
+             helperText='Поле должно быть заполнено'
+
+              />
+            <FormInput 
+                      label='Электронная почта'
+                       icon={representative}
+                        placeholder='Почта'
+                        validate
+                        register={register}
+                        register_field='email'
+                        isError={errors.email}
+                        helperText={
+                          errors.email?.type === 'required'
+                            ? 'Поле должно быть заполнено'
+                            : errors.email?.type === 'pattern'
+                            ? 'Некоректная почта'
+                            : ''
+                        }
+                        />
           </div>
           <div className={styles.column}>
-            <FormInput label='Телефон' icon={representative} placeholder='+375 __ ___ __'/>
-            <FormInput label='Компания' icon={representative} placeholder='Название'/>
+            <FormInput 
+                  label='Телефон'
+                   icon={representative}
+                    placeholder='+375 __ ___ __'
+                    register={register}
+                        register_field='phone'
+                        isError={errors.phone}
+                        helperText='Поле должно быть заполнено'
+                    />
+            <FormInput 
+                      label='Компания'
+                        icon={representative}
+                      placeholder='Название'
+                      register={register}
+                        register_field='companyName'
+                        isError={errors.companyName}
+                        helperText='Поле должно быть заполнено'    
+              />
           </div>
         </div>
         <h3 className={styles.info_title}>Информация о грузе</h3>
         <div className={styles.routes}>
-          <FormInput label='Страна Окуда' icon={representative} placeholder='Россия'/>
-          <FormInput label='Страна Куда' icon={representative} placeholder='Беларусь'/>
-          <FormInput label='Город Окуда' icon={representative} placeholder='Название'/>
-          <FormInput label='Город Куда' icon={representative} placeholder='Название'/>
+          <FormInput 
+                label='Страна Откуда'
+                icon={representative}
+                placeholder='Россия'
+                register={register}
+                register_field='сountryFrom'
+                isError={errors.сountryFrom}
+                helperText='Поле должно быть заполнено' 
+                  />
+          <FormInput 
+                      label='Страна Куда'
+                       icon={representative}
+                      placeholder='Беларусь'
+                      register={register}
+                      register_field='сountryTo'
+                      isError={errors.сountryTo}
+                      helperText='Поле должно быть заполнено'      
+                        />
+          <FormInput 
+                      label='Город Откуда'
+                      icon={representative}
+                      placeholder='Название'
+                      register={register}
+                      register_field='cityFrom'
+                      isError={errors.cityFrom}
+                      helperText='Поле должно быть заполнено'  
+                      />
+          <FormInput 
+                    label='Город Куда'
+                     icon={representative}
+                    placeholder='Название'
+                    register={register}
+                      register_field='cityTo'
+                      isError={errors.cityTo}
+                      helperText='Поле должно быть заполнено'        
+                      />
         </div>
         <h3 className={styles.info_title}>Страхование груза</h3>
         <div className={styles.buttons_container}>
@@ -48,13 +147,12 @@ const SettlementForm = () => {
           <div className={styles.confirm}>
             <GoogleReCaptchaCheckbox
             />
-            <button className={styles.button}>
+            <button type='submit' className={styles.button}>
               Расчитать стоимость
             </button>
           </div>
-
         </div>
-      </div>
+      </form>
   );
 };
 

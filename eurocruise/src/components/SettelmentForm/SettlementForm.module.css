@@ -148,7 +148,8 @@
     }
     .routes {
         align-items: center;
-        gap: 15px;
+        gap: 20px;
+        margin-bottom: 30px;
     }
     .routes div{
         width: 320px;
@@ -180,7 +181,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto;
-        gap: 10px;
+        gap: 30px;
     }
     .representative_info div{
         width: auto;

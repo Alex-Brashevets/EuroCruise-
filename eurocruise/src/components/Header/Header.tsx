@@ -26,9 +26,9 @@ export const Header = () => {
         </div>
         <div className={styles.item}>
           <div className={styles.header_button}>
-          <a href="ссылка" className={styles.link1}>
+          <NavLink to="/" className={styles.link1}>
             <button className={styles.button}> Рассчитать стоимость</button>
-          </a>
+          </NavLink>
           </div>
 
           <a href="ссылка" className={styles.link}>
