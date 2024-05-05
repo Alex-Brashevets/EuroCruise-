@@ -7,7 +7,6 @@ import watch from "/src/assets/watch.svg";
 import Package from "/src/assets/ProtectPackage.svg";
 import map from "/src/assets/map.svg";
 import {BenefitsCard} from "../../components/BenefitsCard/BenefitsCard";
-import { NewsContainer } from "../../components/NewsContainer/NewsContainer";
 
 const MainPage = () => {
   return (
