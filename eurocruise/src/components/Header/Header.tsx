@@ -65,7 +65,7 @@ export const Header = () => {
       <ul className={styles.li1}>
         <li className={styles.text}>
           <div className={styles.link}>
-            <Link to="About" smooth={true} duration={800} className={styles.link}> О НАС</Link>
+            <Link to="About" smooth={true} duration={700} className={styles.link}> О НАС</Link>
         </div>
         </li>
         <li className={styles.text}>

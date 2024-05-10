@@ -14,7 +14,6 @@ const MainPage = () => {
         <Body/>
         <SettlementForm/>
         <NoName/>
-        <NewsContainer/>
         <div className={styles.benefits_container}>
           <BenefitsCard title="Экономия времени" description={<>Не надо звонить <br/> и вести долгие <br/> переговоры</>} img={watch} />
           <BenefitsCard title="Отслеживание груза" description={<>Схема отслеживая <br/> покажет <br/> где ваш грузт</>} img={map} />
