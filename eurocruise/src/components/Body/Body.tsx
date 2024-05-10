@@ -14,7 +14,7 @@ export const Body = () => {
         </div>
       </div>
       <div className={styles.container2}>
-        <div className={styles.abotus}>
+        <div id= "About"className={styles.abotus}>
           <div className={styles.vibe}>
             <h2 className={styles.about}>О нас </h2>
             <img className={styles.line} src={ThreeLine}/>

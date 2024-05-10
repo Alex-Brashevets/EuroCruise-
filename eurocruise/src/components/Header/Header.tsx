@@ -5,6 +5,9 @@ import strelka from "/src/assets/strelka.svg";
 import placeholder from "/src/assets/placeholder.svg";
 import {NavLink} from "react-router-dom";
 import React, { useState } from 'react';
+
+import { Link, Element } from 'react-scroll';
+
 import { useOnClickOutside } from "../../utils/hooks/useOnClickOutside";
 export const Header = () => {
   const [nav, setNav] = useState(false);  
@@ -61,9 +64,9 @@ export const Header = () => {
       </div>
       <ul className={styles.li1}>
         <li className={styles.text}>
-          <NavLink to="/about-us" className={styles.link}>
-            О НАС
-          </NavLink>
+          <div className={styles.link}>
+            <Link to="About" smooth={true} duration={800} className={styles.link}> О НАС</Link>
+        </div>
         </li>
         <li className={styles.text}>
           <NavLink to="/service-center" className={styles.link}>
@@ -76,7 +79,7 @@ export const Header = () => {
           </NavLink>
         </li>
         <li className={styles.text}>
-          <NavLink to="/services" className={styles.link}>
+          <NavLink to="/add-services" className={styles.link}>
             ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ
           </NavLink>
         </li>

@@ -89,6 +89,10 @@
     text-decoration: none;
     font-family: "Montserrat", sans-serif;
 }
+.link a{
+    text-decoration: none;
+  scroll-behavior: smooth;
+}
 .text a {
     color: white;
   }
