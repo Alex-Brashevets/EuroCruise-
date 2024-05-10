@@ -4,7 +4,9 @@ import styles from './SettlementForm.module.css';
 import representative from '/src/assets/world_2.svg'
 import {GoogleReCaptchaCheckbox} from "@google-recaptcha/react";
 import { useForm as useSendForm } from '@formspree/react';
-import {useState} from "react";
+import {useRef, useState} from "react";
+import { useOnClickOutside } from '../../utils/hooks/useOnClickOutside';
+import { ModalWindow } from '../ModalWindow/ModalWindow';
 
 
 export interface SettlementFormInputs {
@@ -21,7 +23,14 @@ export interface SettlementFormInputs {
 
 const SettlementForm = () => {
   const [insuranceSelected, SetInsuranceSelected] = useState(true);
+  const [recaptchaCheked, setRecaptchaChecked] = useState<null | String>(null)
+  const [recaptchReset, setRecaptchaReset] = useState<null | String>(null)
   const [state, handleSendFormSubmit] = useSendForm("xayrbezz");
+  const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
+  const modalContainer = useRef<HTMLDivElement>(null);
+  useOnClickOutside(modalContainer, () => setModalIsOpen(false));
+
+
   const {
     register,
     handleSubmit,
@@ -29,8 +38,11 @@ const SettlementForm = () => {
   } = useForm<SettlementFormInputs>()
 
   const onSubmit: SubmitHandler<SettlementFormInputs> = (data: any) => {
+   if (recaptchaCheked) {
     console.log(data)
     handleSendFormSubmit(data)
+    setModalIsOpen(true)
+   }
   }
 
   return (
@@ -145,13 +157,20 @@ const SettlementForm = () => {
             </div>
           </div>
           <div className={styles.confirm}>
-            <GoogleReCaptchaCheckbox
+            <GoogleReCaptchaCheckbox  callback={(token)=>setRecaptchaChecked(token)}
             />
             <button type='submit' className={styles.button}>
               Расчитать стоимость
             </button>
           </div>
         </div>
+        <ModalWindow 
+        label='Заявка успешно отпрвлена'
+         description='В скором времени с вами свяжется менеджер'
+          isOpen={modalIsOpen}
+           ref={modalContainer}
+           onClose={()=>setModalIsOpen(false)}
+           />
       </form>
   );
 };
