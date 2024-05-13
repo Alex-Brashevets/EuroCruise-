@@ -1,6 +1,9 @@
 .text:visited {
     color: white !important;
   }
+  .header {
+    
+  }
 .container {
     display: flex;
     font-family: "Montserrat", sans-serif;
@@ -9,7 +12,8 @@
     height: 93px;
     align-items: center;
     gap: 15px;
-    
+    background-color: white;
+
 }
 .item {
     display: flex;

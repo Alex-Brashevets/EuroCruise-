@@ -6,16 +6,15 @@ import placeholder from "/src/assets/placeholder.svg";
 import {NavLink} from "react-router-dom";
 import React, { useState } from 'react';
 
-import { Link, Element } from 'react-scroll';
-
 import { useOnClickOutside } from "../../utils/hooks/useOnClickOutside";
+import { Anchor } from "../../utils/hooks/useAnchor";
 export const Header = () => {
   const [nav, setNav] = useState(false);  
   const sideNavBar = React.useRef<HTMLDivElement>(null);
   useOnClickOutside(sideNavBar, () => setNav(false));
 
   return (
-    <header>
+    <header className={styles.header}>
       <div className={styles.container}>
         <div className={styles.item}>
           <NavLink className={styles.link} to={'/'}>
@@ -29,9 +28,7 @@ export const Header = () => {
         </div>
         <div className={styles.item}>
           <div className={styles.header_button}>
-          <NavLink to="/" className={styles.link1}>
             <button className={styles.button}> Рассчитать стоимость</button>
-          </NavLink>
           </div>
 
           <a href="ссылка" className={styles.link}>
@@ -65,7 +62,7 @@ export const Header = () => {
       <ul className={styles.li1}>
         <li className={styles.text}>
           <div className={styles.link}>
-            <Link to="About" smooth={true} duration={700} className={styles.link}> О НАС</Link>
+            <Anchor to="About" path="/"> О НАС</Anchor>
         </div>
         </li>
         <li className={styles.text}>
