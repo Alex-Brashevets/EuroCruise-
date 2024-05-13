@@ -70,7 +70,7 @@ export const Header = () => {
         </li>
         <li className={styles.text}>
           <NavLink to="/service-center" className={styles.link}>
-            СЕРВИСНЫЙ ЦЕНТ
+            СЕРВИСНЫЙ ЦЕНТР
           </NavLink>
         </li>
         <li className={styles.text}>
