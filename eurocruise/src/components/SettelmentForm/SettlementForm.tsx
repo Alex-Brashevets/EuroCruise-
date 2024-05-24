@@ -46,8 +46,8 @@ const SettlementForm = () => {
   }
 
   return (
-      <form className={styles.container} onSubmit={handleSubmit(onSubmit)}>
-        <div className={styles.header}>
+      <form  className={styles.container} onSubmit={handleSubmit(onSubmit)}>
+        <div id='Form' className={styles.header}>
           <div className={styles.header_info}>
             РАСЧЕТ СТОИМОСТИ
           </div>

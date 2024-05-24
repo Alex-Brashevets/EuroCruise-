@@ -7,6 +7,8 @@ import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import AddServices from "./pages/AddServices/AddServices";
 import Delivery from './pages/Delivery/Delivery';
 import Sales from './pages/Sales/Sales';
+import NewsArticlePage from './pages/NewsArticlePage/NewsArticlePage';
+import TrackingPage from './pages/TrackingPage/TrackingPage';
 
 const DefaultRouter = createBrowserRouter(
     createRoutesFromElements(
@@ -17,6 +19,8 @@ const DefaultRouter = createBrowserRouter(
           <Route path='/add-services' element={<AddServices/>} />
           <Route path='/delivery' element={<Delivery/>} />
           <Route path='/sales' element={<Sales/>} />
+          <Route path='/news/:id' element={<NewsArticlePage/>} />
+          <Route path='/tracking' element={<TrackingPage/>} />
         </Route>
     )
 );

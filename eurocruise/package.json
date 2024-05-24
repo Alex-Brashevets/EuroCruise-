@@ -13,6 +13,7 @@
     "@formspree/react": "^2.5.1",
     "@google-recaptcha/react": "^1.0.3",
     "antd": "^5.17.0",
+    "axios": "^1.7.2",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.4",
     "react": "^18.2.0",

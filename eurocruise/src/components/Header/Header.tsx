@@ -28,7 +28,7 @@ export const Header = () => {
         </div>
         <div className={styles.item}>
           <div className={styles.header_button}>
-            <button className={styles.button}> Рассчитать стоимость</button>
+          <Anchor to="Form" path="/"> <button className={styles.button}> Рассчитать стоимость</button></Anchor>
           </div>
 
           <a href="ссылка" className={styles.link}>

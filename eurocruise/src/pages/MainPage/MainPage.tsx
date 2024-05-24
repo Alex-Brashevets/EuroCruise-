@@ -7,6 +7,7 @@ import watch from "/src/assets/watch.svg";
 import Package from "/src/assets/ProtectPackage.svg";
 import map from "/src/assets/map.svg";
 import {BenefitsCard} from "../../components/BenefitsCard/BenefitsCard";
+import { NewsContainer } from "../../components/NewsContainer/NewsContainer";
 
 const MainPage = () => {
   return (
@@ -19,6 +20,7 @@ const MainPage = () => {
           <BenefitsCard title="Отслеживание груза" description={<>Схема отслеживая <br/> покажет <br/> где ваш грузт</>} img={map} />
           <BenefitsCard title="Страхование грузов" description={<>Перевозчики торгуются <br/> за ваш заказ <br/>,снижая цены</>} img={Package} />
         </div>
+        <NewsContainer/>
       </>
   );
 };

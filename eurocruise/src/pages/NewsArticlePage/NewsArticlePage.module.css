@@ -1,0 +1,9 @@
+.page {
+    padding: 50px 80px;
+    font-family: 'Monserat', sans-serif;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+}
