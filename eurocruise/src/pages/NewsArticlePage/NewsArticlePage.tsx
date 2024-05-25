@@ -19,7 +19,7 @@ const NewsArticlePage = () => {
             <h1>{article?.title}</h1>
             <div className={styles.content}>
                <img src={article?.photo} alt="" />
-               <p>{article?.article}</p>
+               <p className={styles.articleText}>{article?.article}</p>
             </div>
         </div>
     )

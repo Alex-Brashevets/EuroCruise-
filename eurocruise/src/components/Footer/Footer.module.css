@@ -2,11 +2,21 @@
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
-    margin: 0 6%;
+    margin: 0 11%;
 }
 .container_img{
     display: flex;
     flex-direction: column;
+}
+.vector_img{
+    margin-right: 10px;
+}
+.Company{
+    font-size: 32px;
+    font-weight: bold;
+}
+.info{
+    font-size: 20px;
 }
 .columText{
     display: flex;
@@ -23,14 +33,21 @@
         flex-direction: column;
         gap: 40px;
     }
+    .CompanyMain{
+        justify-content: center;
+        text-align: center;
+    }
 }
-
 /*планшет*/
 @media only screen and (min-width: 650px)  and (max-width: 1080px) {
     .footer_container{
         margin: 0 14%;
         flex-direction: column;
         gap: 40px
+    }
+    .CompanyMain{
+        justify-content: center;
+        text-align:center;
     }
 }
 

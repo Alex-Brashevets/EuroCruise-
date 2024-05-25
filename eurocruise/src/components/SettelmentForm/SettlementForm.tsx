@@ -2,6 +2,11 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 import { FormInput } from '../ui/Inputs/FormInput/FormInput';
 import styles from './SettlementForm.module.css';
 import representative from '/src/assets/world_2.svg'
+import vector from '/src/assets/VectorM.svg'
+import road from '/src/assets/Road.svg'
+import roadFinish from '/src/assets/Road_finish.svg'
+import telephone from '/src/assets/TeleP.svg'
+import company from '/src/assets/company.svg'
 import {GoogleReCaptchaCheckbox} from "@google-recaptcha/react";
 import { useForm as useSendForm } from '@formspree/react';
 import {useRef, useState} from "react";
@@ -46,8 +51,8 @@ const SettlementForm = () => {
   }
 
   return (
-      <form  className={styles.container} onSubmit={handleSubmit(onSubmit)}>
-        <div id='Form' className={styles.header}>
+      <form className={styles.container} onSubmit={handleSubmit(onSubmit)}>
+        <div className={styles.header}>
           <div className={styles.header_info}>
             РАСЧЕТ СТОИМОСТИ
           </div>
@@ -67,11 +72,10 @@ const SettlementForm = () => {
              register_field='representative'
              isError={errors.representative}
              helperText='Поле должно быть заполнено'
-
               />
             <FormInput 
                       label='Электронная почта'
-                       icon={representative}
+                       icon={vector}
                         placeholder='Почта'
                         validate
                         register={register}
@@ -89,7 +93,7 @@ const SettlementForm = () => {
           <div className={styles.column}>
             <FormInput 
                   label='Телефон'
-                   icon={representative}
+                   icon={telephone}
                     placeholder='+375 __ ___ __'
                     register={register}
                         register_field='phone'
@@ -98,7 +102,7 @@ const SettlementForm = () => {
                     />
             <FormInput 
                       label='Компания'
-                        icon={representative}
+                        icon={company}
                       placeholder='Название'
                       register={register}
                         register_field='companyName'
@@ -111,7 +115,7 @@ const SettlementForm = () => {
         <div className={styles.routes}>
           <FormInput 
                 label='Страна Откуда'
-                icon={representative}
+                icon={road}
                 placeholder='Россия'
                 register={register}
                 register_field='сountryFrom'
@@ -120,7 +124,7 @@ const SettlementForm = () => {
                   />
           <FormInput 
                       label='Страна Куда'
-                       icon={representative}
+                       icon={roadFinish}
                       placeholder='Беларусь'
                       register={register}
                       register_field='сountryTo'
@@ -129,7 +133,7 @@ const SettlementForm = () => {
                         />
           <FormInput 
                       label='Город Откуда'
-                      icon={representative}
+                      icon={road}
                       placeholder='Название'
                       register={register}
                       register_field='cityFrom'
@@ -138,7 +142,7 @@ const SettlementForm = () => {
                       />
           <FormInput 
                     label='Город Куда'
-                     icon={representative}
+                     icon={roadFinish}
                     placeholder='Название'
                     register={register}
                       register_field='cityTo'

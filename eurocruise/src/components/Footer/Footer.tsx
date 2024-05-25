@@ -1,8 +1,9 @@
 import { ReactNode } from "react";
 import logo from "/src/assets/logo.svg";
-  import styles from "./Footer.module.css";
+import styles from "./Footer.module.css";
 import vector from "/src/assets/Vector.svg";
-import FirstScreen from "/src/assets/Rectangle2.svg";
+import Vector from '/src/assets/VectorM.svg'
+import telephone from '/src/assets/TeleP.svg'
 import {QuestionUsForm} from "../QuestionUsForm/QuestionUsForm";
 export const Footer = () => {
   return (
@@ -15,11 +16,11 @@ export const Footer = () => {
             <div className={styles.FooterText}>998 Devonshire<br /> Ave.Camp  Hill, PA 17011</div>
           </div>
           <div className={styles.columText}>
-            <img className={styles.vector_img} src={vector} />
+            <img className={styles.vector_img} src={Vector} />
             <div className={styles.FooterText}>haddawy@comcast.net</div>
           </div>
           <div className={styles.columText}>
-            <img className={styles.vector_img} src={vector} />
+            <img className={styles.vector_img} src={telephone} />
             <div className={styles.FooterText}>(334) 202-4792</div>
           </div>
         </div>
@@ -27,7 +28,7 @@ export const Footer = () => {
           <QuestionUsForm/>
         </div>
         <div className={styles.CompanyMain}>
-          <div className={styles.Company}>Company</div>
+          <div className={styles.Company}>КОМПАНИЯ</div>
           <ul className={styles.info}>
             <li className={styles.info_container}>о нас</li>
             <li className={styles.info_container}>карьера</li>
