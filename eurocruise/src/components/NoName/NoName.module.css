@@ -9,7 +9,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 63px
+    margin-bottom: 63px;
+    font-family: "Montserrat", sans-serif;
 }
 .text{
     color: aliceblue;
@@ -24,6 +25,7 @@
     font-size: 21.33px;
 }
 .container3{
+    font-family: "Montserrat", sans-serif;
     display: flex;
     justify-content: space-between;
     padding-right: 12%;

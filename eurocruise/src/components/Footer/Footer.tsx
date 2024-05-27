@@ -12,8 +12,8 @@ export const Footer = () => {
         <div className={styles.container_img}>
           <img className={styles.logo2} src={logo} alt="" />
           <div className={styles.columText}>
-            <img className={styles.vector_img} src={vector} />
-            <div className={styles.FooterText}>998 Devonshire<br /> Ave.Camp  Hill, PA 17011</div>
+            <img className={styles.vector_img} width="24" height="24" src={vector} />
+            <div className={styles.FooterText}>Республика Беларусь,<br /> г.Ковердяки, Брестская область 225032<br />ул. 40 Лет Победы 15 </div>
           </div>
           <div className={styles.columText}>
             <img className={styles.vector_img} src={Vector} />

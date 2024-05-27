@@ -53,7 +53,7 @@ const SettlementForm = () => {
   return (
       <form className={styles.container} onSubmit={handleSubmit(onSubmit)}>
         <div className={styles.header}>
-          <div className={styles.header_info}>
+          <div  className={styles.header_info}>
             РАСЧЕТ СТОИМОСТИ
           </div>
           <span className={styles.line}/>
@@ -62,7 +62,7 @@ const SettlementForm = () => {
             <span>* - Обязательные поля для заполнения </span>
           </div>
         </div>
-        <div className={styles.representative_info}>
+        <div  id='Form' className={styles.representative_info}>
           <div className={styles.column}>
             <FormInput 
             label='Представитель'
