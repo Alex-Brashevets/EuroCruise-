@@ -13,6 +13,9 @@ import Delivery from "./pages/Delivery/Delivery";
 import Sales from "./pages/Sales/Sales";
 import NewsArticlePage from "./pages/NewsArticlePage/NewsArticlePage";
 import TrackingPage from "./pages/TrackingPage/TrackingPage";
+import { Suspense } from "react";
+import { useTranslation } from "react-i18next";
+
 
 const DefaultRouter = createBrowserRouter(
   createRoutesFromElements(
@@ -28,11 +31,11 @@ const DefaultRouter = createBrowserRouter(
     </Route>
   )
 );
-
 function App() {
   return (
-    <>
+    <><Suspense fallback="...is loading">
       <RouterProvider router={DefaultRouter} />
+      </Suspense>
     </>
   );
 }

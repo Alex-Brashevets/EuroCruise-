@@ -2,7 +2,6 @@
     display: flex;
     margin-left: 14%;
     margin-right: 10%;
-    font-family: "Montserrat", sans-serif;
 }
 .news{
     font-size: 60px;
@@ -16,21 +15,3 @@
     height: 336px;
     width: 307px;
 }
-
-@media only screen and (max-width: 650px) {
-    .threeImg{
-       flex-direction: column;
-        gap: 40px;
-       align-items: center;
-    }
-    .threeImg .imgL,.threeImg .imgR {
-        display: none;
-     }
-}
-/*планшет*/
-@media only screen and (min-width: 650px)  and (max-width: 1080px) {
-    .vibe{
-        flex-direction: column;
-     }
-}
-
