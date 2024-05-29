@@ -1,0 +1,29 @@
+
+.form {
+    background: #d1d0d0;
+    padding: 3rem;
+    border: 1px solid #EAEBED;
+    border-radius: 12px;
+    width: 23.0875rem;
+    max-width: 420px;
+    height: max-content;
+    font-family: 'Moserat', sans-serif;
+}
+.page {
+    padding: 14%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button {
+    background-color: #0A3F72;
+    border-radius: 6px;
+    color: #FFFFFF;
+    font-size: 18px;
+    padding: 25px 20px 25px 32px;
+    border: none;
+    cursor: pointer;
+}
+.button:hover {
+     transform: scale(1.03);
+ }
