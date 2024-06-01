@@ -13,6 +13,7 @@ export const Header = () => {
   const sideNavBar = React.useRef<HTMLDivElement>(null);
   useOnClickOutside(sideNavBar, () => setNav(false));
   const{ t, i18n } = useTranslation(); 
+  const [isOpen,setOpen] = useState(false)
   return (
     <header className={styles.header}>
       <div className={styles.container}>
@@ -30,10 +31,20 @@ export const Header = () => {
           <div className={styles.header_button}>
           <Anchor to="Form" path="/"> <button className={styles.button}>{t('calcCost')}</button></Anchor>
           </div>
-
-          <a href="ссылка" className={styles.link}>
-            <div className={styles.language}> {t('language')} </div>
-          </a>
+          <span  className={styles.link}>
+            <div className={styles.Drop }>
+            <div className={styles.language} onClick={()=>setOpen(!isOpen)}> {t('language')} </div>
+          {isOpen &&   <nav
+        className={styles.DropDown} >
+          <ul className={styles.menulist}>
+            <li>RU</li>
+            <li>EN</li>
+            <li>PL</li>
+          </ul>
+        </nav>}
+            </div>
+          </span>
+       
         <img className={styles.strelkaimg} src={strelka} alt="xz" />
         <div>
         <div onClick={()=> setNav(!nav)} className={styles.Burger}>     
@@ -77,17 +88,17 @@ export const Header = () => {
         </li>
         <li className={styles.text}>
           <NavLink to="/add-services" className={styles.link}>
-            ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ
+          {t('AditionalService')} 
           </NavLink>
         </li>
         <li className={styles.text}>
           <NavLink to="/delivery" className={styles.link}>
-            ДОСТАВКА ГРУЗОВ
+          {t('delivery')} 
           </NavLink>
         </li>
         <li className={styles.text}>
           <NavLink to="/sales" className={styles.link}>
-            ПРОДАЖА ТЕХНИКИ С ПРОБЕГОМ
+          {t('carSell')}
           </NavLink>
         </li>
       </ul>

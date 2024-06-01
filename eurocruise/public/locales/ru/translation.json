@@ -3,5 +3,9 @@
     "calcCost":"рассчитать стоимость",
     "language":"ru",
     "vacancies":"Вакансии",
-    "serviceCentr":"Сервисный центр"
+    "serviceCentr":"Сервисный центр",
+    "aboutUs":" О НАС",
+    "AditionalService":"ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ",
+    "delivery":"ДОСТАВКА ГРУЗОВ",
+    "carSell":"ПРОДАЖА ТЕХНИКИ С ПРОБЕГОМ"
 }
