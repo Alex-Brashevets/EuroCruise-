@@ -43,17 +43,13 @@ const ICON = icon({
   })
   
   interface AddLocationMarkerProps  {
-    updatePosition: (e:any) => void;
+    position: any
   }
 
-const LocationMarker = ({updatePosition}:AddLocationMarkerProps) => {
-    const [position, setPosition] = useState<any>(null)
+const LocationMarker = ({position}:AddLocationMarkerProps) => {
     const map = useMapEvents({
       click(e) {
-        map.locate()
-        setPosition(e.latlng)
-        updatePosition(`(${e.latlng.lat}, ${e.latlng.lng})`)
-        map.flyTo(e.latlng, map.getZoom())
+        map.flyTo(position.latlng, map.getZoom())
       },
     })
   
@@ -108,17 +104,10 @@ const Routing = ({ sourceCity, destinationCity }: RoutingProps) => {
   };
   
 
-
-
-  type MapFormProps =  {
-    updateFields?: (fields: any) => void;
-  };
 const MapForm = (
-    {updateFields}:MapFormProps
+    
 ) => {
-  const updatePosition = (position: string) => {
-    updateFields({cemeteryCoords: position})
-  }
+  
   return (
       <div className={styles.container}>
        
@@ -130,7 +119,7 @@ const MapForm = (
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            <LocationMarker updatePosition={updatePosition}/>
+            <LocationMarker position={{lat: 53.9045, lng: 27.5615}}/>
             <Routing sourceCity={city[0]} destinationCity={city[1]}/>     
           </MapContainer>
       </div>
@@ -167,8 +156,17 @@ const TrackingPage = () => {
 
     return (
         <div className={styles.page}>
+            <div className={styles.info }>
+                <h1>
+                Отслеживайте местоположение груза
+                </h1>
+                <h3>
+                Сервис по отслеживанию местоположения груза. Благодаря сервису отслеживания грузов, Вы можете в реальном времени узнать, где находится Ваш груз, и ориентировочную дату прибытия груза.
+                </h3>
+            </div>
+            <div className={styles.container}>
             <form className={styles.form} onSubmit={SubmitHandler}>
-             <h1>Отслеживайте свои маршруты</h1>
+             <h3>  Отследить свой груз</h3>
              <label htmlFor="">Введите ключ:</label>
              <Input placeholder='Ключ' onChange={(e: ChangeEvent<HTMLInputElement>)=>setApi(e.target.value)}/>
              <label htmlFor="">Введите номер:</label>
@@ -176,6 +174,8 @@ const TrackingPage = () => {
              <button className={styles.button} type='submit'> Отслеживать</button> 
             </form>      
             <MapForm/>
+            </div>
+           
         </div>
     )
 }
