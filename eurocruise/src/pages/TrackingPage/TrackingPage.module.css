@@ -29,14 +29,14 @@
     cursor: pointer;
 }
 .button:hover {
-     transform: scale(1.03);
- }
+    transform: scale(1.03);
+}
 .info h1 {
     color: #0a3f72;
 }
- .container {
+.container {
     display: flex;
     justify-content: space-between;
     gap: 30px;
     width: 100%;
- }
+}
