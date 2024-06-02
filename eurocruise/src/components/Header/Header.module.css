@@ -16,15 +16,20 @@
   position: relative;
 }
 .DropDown{
-  border:solid #000000 2px;
-  border-radius: 2px;
   position: absolute;
-  top: 100;
   left: 0;
   transition: 0.3s;
 }
-.menulist{
+.menulist {
   text-decoration: none;
+  background-color: #0A3F72;
+  color: #FFFFFF;
+  padding: 7px;
+  list-style: none;
+  cursor: pointer;
+}
+.menulist li {
+ cursor: pointer;
 }
 .item {
   display: flex;
@@ -42,6 +47,7 @@
   width: 195px;
   outline: none;
   height: 37px;
+  cursor: pointer;
 }
 .place_img {
   margin-left: 4%;
@@ -53,11 +59,12 @@
 
 .language {
   margin-left: 3px;
-  
+  cursor: pointer;
 }
 .strelkaimg {
   margin-left: 1px;
   margin-right: 38px;
+  cursor: pointer;
 }
 .menu {
   display: flex;
@@ -114,7 +121,9 @@
 .text a:focus {
   color: white;
 }
-
+.Burger{
+  cursor: pointer;
+}
 /*мобилка*/
 @media only screen and (max-width: 650px) {
   .place_img {
@@ -126,6 +135,7 @@
   .strelkaimg {
     width: 3px;
     margin-left: 1px;
+
   }
   .office {
     font-size: 4px;

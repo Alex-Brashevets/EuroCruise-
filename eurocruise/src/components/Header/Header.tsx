@@ -68,7 +68,7 @@ export const Header = () => {
               )}
             </div>
           </span>
-          <img onClick={() => setOpen(!isOpen)} className={styles.strelkaimg} src={strelka} alt="xz" />
+          <img onClick={() => setOpen(!isOpen)} className={styles.strelkaimg} style={isOpen ? { transform: 'rotate(180deg)' } : {}} src={strelka} alt="xz" />
           <div>
             <div  onClick={() => setNav(!nav)} className={styles.Burger}>
               {nav ? (
