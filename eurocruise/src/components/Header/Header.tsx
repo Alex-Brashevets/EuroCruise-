@@ -3,105 +3,138 @@ import logo from "/src/assets/logo.svg";
 import BurgerM from "/src/assets/BurgerMenu.svg";
 import strelka from "/src/assets/strelka.svg";
 import placeholder from "/src/assets/placeholder.svg";
-import {NavLink} from "react-router-dom";
-import React, { useState } from 'react';
+import { NavLink } from "react-router-dom";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useOnClickOutside } from "../../utils/hooks/useOnClickOutside";
 import { Anchor } from "../../utils/hooks/useAnchor";
 export const Header = () => {
-  const [nav, setNav] = useState(false);  
+  const [nav, setNav] = useState(false);
+  const changeLanguage = (language: string): void => {
+    i18n.changeLanguage(language);
+  };
   const sideNavBar = React.useRef<HTMLDivElement>(null);
   useOnClickOutside(sideNavBar, () => setNav(false));
-  const{ t, i18n } = useTranslation(); 
-  const [isOpen,setOpen] = useState(false)
+  const { t, i18n } = useTranslation();
+  const [isOpen, setOpen] = useState(false);
   return (
     <header className={styles.header}>
       <div className={styles.container}>
         <div className={styles.item}>
-          <NavLink className={styles.link} to={'/'}>
+          <NavLink className={styles.link} to={"/"}>
             <img className={styles.logo} src={logo} alt="logo" />
           </NavLink>
-          <div className={styles.vertical_line}/>
+          <div className={styles.vertical_line} />
           <img className={styles.place_img} src={placeholder} alt="xz" />
           <a href="ссылка" className={styles.link}>
-            <div className={styles.office}>{t('text')}</div>
+            <div className={styles.office}>{t("text")}</div>
           </a>
         </div>
         <div className={styles.item}>
           <div className={styles.header_button}>
-          <Anchor to="Form" path="/"> <button className={styles.button}>{t('calcCost')}</button></Anchor>
+            <Anchor to="Form" path="/">
+              {" "}
+              <button className={styles.button}>{t("calcCost")}</button>
+            </Anchor>
           </div>
-          <span  className={styles.link}>
-            <div className={styles.Drop }>
-            <div className={styles.language} onClick={()=>setOpen(!isOpen)}> {t('language')} </div>
-          {isOpen &&   <nav
-        className={styles.DropDown} >
-          <ul className={styles.menulist}>
-            <li>RU</li>
-            <li>EN</li>
-            <li>PL</li>
-          </ul>
-        </nav>}
+          <span className={styles.link}>
+            <div className={styles.Drop}>
+              <div className={styles.language} onClick={() => setOpen(!isOpen)}>
+                {t("language")}
+              </div>
+              {isOpen && (
+                <nav className={styles.DropDown}>
+                  <ul className={styles.menulist}>
+                    <li
+                      onClick={() => {
+                        changeLanguage("ru");
+                        setOpen(false);
+                      }}
+                    >
+                      RU
+                    </li>
+                    <li
+                      onClick={() => {
+                        changeLanguage("en");setOpen(false);}}>
+                      EN
+                    </li>
+                    <li
+                      onClick={() => {
+                        changeLanguage("pl");setOpen(false);}}>
+                      PL
+                    </li>
+                  </ul>
+                </nav>
+              )}
             </div>
           </span>
-       
-        <img className={styles.strelkaimg} src={strelka} alt="xz" />
-        <div>
-        <div onClick={()=> setNav(!nav)} className={styles.Burger}>     
-        {nav ?<img src={BurgerM} alt="Open Burger Menu" /> : <img src={BurgerM} alt="Closed Burger Menu" />} 
-        </div>
-        {nav && <div ref ={sideNavBar}> 
-          <ul 
-          className={nav ? styles.menu : styles.active}>
-          <li>
-            <a href="##">product</a>
-          </li>
-          <li>
-            <a href="##">product</a>
-          </li>
-          <li>
-            <a href="##">product</a>
-          </li>
-          <li>
-            <a href="##">product</a>
-          </li>
-        </ul>
-        </div>}
-        </div>
+          <img onClick={() => setOpen(!isOpen)} className={styles.strelkaimg} src={strelka} alt="xz" />
+          <div>
+            <div  onClick={() => setNav(!nav)} className={styles.Burger}>
+              {nav ? (
+                <img src={BurgerM} alt="Open Burger Menu" />
+              ) : (
+                <img src={BurgerM} alt="Closed Burger Menu" />
+              )}
+            </div>
+            {nav && (
+              <div ref={sideNavBar}>
+                <ul className={nav ? styles.menu : styles.active}>
+                  <li>
+                    <a href="##">product</a>
+                  </li>
+                  <li>
+                    <a href="##">product</a>
+                  </li>
+                  <li>
+                    <a href="##">product</a>
+                  </li>
+                  <li>
+                    <a href="##">product</a>
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
         </div>
       </div>
+      <div className={styles.Sticky}>
       <ul className={styles.li1}>
         <li className={styles.text}>
           <div className={styles.link}>
-            <Anchor to="About" path="/"> {t('aboutUs')}</Anchor>
-        </div>
+            <Anchor to="About" path="/">
+              {" "}
+              {t("aboutUs")}
+            </Anchor>
+          </div>
         </li>
         <li className={styles.text}>
           <NavLink to="/service-center" className={styles.link}>
-          {t('serviceCentr')} 
+            {t("serviceCentr")}
           </NavLink>
         </li>
         <li className={styles.text}>
           <NavLink to="/vacancies" className={styles.link}>
-          {t('vacancies')} 
+            {t("vacancies")}
           </NavLink>
         </li>
         <li className={styles.text}>
           <NavLink to="/add-services" className={styles.link}>
-          {t('AditionalService')} 
+            {t("AditionalService")}
           </NavLink>
         </li>
         <li className={styles.text}>
           <NavLink to="/delivery" className={styles.link}>
-          {t('delivery')} 
+            {t("delivery")}
           </NavLink>
         </li>
         <li className={styles.text}>
           <NavLink to="/sales" className={styles.link}>
-          {t('carSell')}
+            {t("carSell")}
           </NavLink>
         </li>
       </ul>
+      </div>
     </header>
   );
 };
