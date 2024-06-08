@@ -80,17 +80,36 @@ export const Header = () => {
             {nav && (
               <div ref={sideNavBar}>
                 <ul className={nav ? styles.menu : styles.active}>
-                  <li>
-                    <a href="##">product</a>
+                  <li onClick={() => {
+                        changeLanguage("en");setOpen(false);}} >
+                    <a className={styles.LiMenu} href="##"><Anchor to="About" path="/">  {" "}
+                    {t("aboutUs")} </Anchor></a>
+                  </li>
+                  <li >
+                    <a className={styles.LiMenu} href="##"><NavLink to="/vacancies" className={styles.LiMenu}>
+                          {t("vacancies")}
+                        </NavLink></a>
+                  </li>
+                  <li onClick={() => {
+                        setOpen(false);}} >
+                    <a className={styles.LiMenu} href="##">          <NavLink to="/add-services" className={styles.LiMenu}>
+            {t("AditionalService")}
+          </NavLink></a>
                   </li>
                   <li>
-                    <a href="##">product</a>
+                    <a className={styles.LiMenu} href="##"><NavLink to="/delivery" className={styles.LiMenu}>
+                          {t("delivery")}
+                        </NavLink></a>
                   </li>
-                  <li>
-                    <a href="##">product</a>
+                  <li >
+                    <a className={styles.LiMenu} href="##"><NavLink to="/service-center" className={styles.LiMenu}>
+                        {t("serviceCentr")}
+                      </NavLink></a>
                   </li>
-                  <li>
-                    <a href="##">product</a>
+                  <li >
+                    <a className={styles.LiMenu} href="##"><NavLink to="/sales" className={styles.LiMenu}>
+                          {t("carSell")}
+                        </NavLink> </a>
                   </li>
                 </ul>
               </div>

@@ -46,6 +46,7 @@
   border-radius: 6px;
   width: 195px;
   outline: none;
+  margin-right: 6px;
   height: 37px;
   cursor: pointer;
 }
@@ -66,20 +67,32 @@
   margin-right: 38px;
   cursor: pointer;
 }
+.LiMenu{
+  color: #FFFFFF;
+  text-decoration: none ;
+}
 .menu {
   display: flex;
   flex-direction: column;
   cursor: pointer;
+  list-style-type: none;
   position: fixed;
-  width: 200px;
+  width: 300px;
+  color: #FFFFFF;
   padding-left: 10px;
   right: 0; /* Изменено значение right */
   top: 0;
+  text-decoration: none;
+  outline: none;
+  gap: 20px;
   bottom: 0;
   height: 100vh;
   background-color: rgb(64, 122, 176);
   z-index: 10;
   transition: left 7 ease;
+}
+.strelkaimg{
+  margin-right:10px ;
 }
 .menu ul {
   display: flex;
